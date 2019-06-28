@@ -18,7 +18,7 @@ The user defined procedure allows you to index and search a explicit Lucene inde
 Given properties of a node can be added to indexes named according to the labels of the node.
 After that the data can be searched with Lucene Syntax.
 
-See link:{root}/main/java/example/FullTextIndex.java[`FullTextIndex.java`] and the link:{root}/test/java/example/LegacyFullTextIndexTest.java[`LegacyFullTextIndexTest.java`].
+See link:{root}/main/kotlin/example/FullTextIndex.kt[`FullTextIndex.kt`] and the link:{root}/test/kotlin/example/LegacyFullTextIndexTest.kt[`LegacyFullTextIndexTest.kt`].
 
 [source,cypher]
 ----
@@ -32,7 +32,7 @@ CALL example.search('Person','name:Jo*') YIELD nodeId
 
 The user defined function is a simple join function that joins a list of strings using a delimiter.
 
-See link:{root}/main/java/example/Join.java[`Join.java`] and the link:{root}/test/java/example/JoinTest.java[`JoinTest.java`].
+See link:{root}/main/kotlin/example/Join.kt[`Join.kt`] and the link:{root}/test/kotlin/example/JoinTest.kt[`JoinTest.kt`].
 
 [source,cypher]
 ----
@@ -50,7 +50,7 @@ WITH n ORDER BY n.born
 RETURN n.born, example.last(n) as last
 ----
 
-See link:{root}/main/java/example/Last.java[`Last.java`] and the link:{root}/test/java/example/LastTest.java[`LastTest.java`].
+See link:{root}/main/kotlin/example/Last.kt[`Last.kt`] and the link:{root}/test/kotlin/example/LastTest.kt[`LastTest.kt`].
 
 == Building
 
@@ -59,7 +59,7 @@ project, simply package the project with maven:
 
     mvn clean package
 
-This will produce a jar-file,`target/procedure-template-1.0.0-SNAPSHOT.jar`,
+This will produce a jar-file, `target/procedure-template-1.0.0-SNAPSHOT.jar`,
 that can be deployed in the `plugin` directory of your Neo4j instance.
 
 == License
